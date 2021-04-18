@@ -11,4 +11,5 @@ label {
 div.instructions {
   font-size: small;
   font-weight: 600;
+  margin: 4px 0px;
 }
