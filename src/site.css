@@ -1,0 +1,14 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+}
+
+div.instructions {
+  font-size: small;
+  font-weight: 600;
+}
