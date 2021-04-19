@@ -707,8 +707,7 @@ class Game {
         ""
       );
     };
-    this.mazeSprites.src =
-      "https://api.dbarone.com/resources/name/maze-sprites-32.png";
+    this.mazeSprites.src = "./maze-sprites-32.png";
   }
 
   initialiseBreadcrumbSprites() {
