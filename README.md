@@ -1,6 +1,8 @@
 # maze-game
 Simple JavaScript maze game
 
+![maze-game](https://github.com/davidbarone/maze-game/blob/main/images/maze-game.png?raw=true)
+
 This article was borne out of an itch I got whilst playing on a few online maze generation web sites. The itch grew into the following challenges:
 - How to generate a 2-dimensional maze
 - How to solve a maze (find the correct / shortest path through a maze)
