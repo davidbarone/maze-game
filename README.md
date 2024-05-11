@@ -30,6 +30,12 @@ Generating a maze is only half the problem. It would be nice to solve it as well
 ## Gamification
 Having built the components to generate and solve a maze, I then decided to turn this into a simple game. The basic premise of the game is that you must navigate through the maze to find the key before the monsters get you. The graphics are all simple 8-bit game style, 32x32 sprites. I've put them all into a single sprite sheet. The ground tiles I created myself. These are used to draw the maze. The character sprites were taken from https://opengameart.org/. The Player #1 graphic comes from https://opengameart.org/content/tiny-characters-set and the monsters come from the 'conjurer' set from https://opengameart.org/content/more-nes-style-rpg-characters. My sprite sheet can be found at: https://api.dbarone.com/resources/name/maze-sprites-32.png.
 
+For the soundtrack, I found a nice site for creating simple background music: https://www.beepbox.co/ This site lets you create some simple instrumental music. It has a really cool feature of being able to save work via the Url. I created a simple file 'twinkle.mp3', accessible with the following Url:
+
+https://www.beepbox.co/#9n31s6k0l00e03t2ma7g0fj07r1i0o432T0v1u10f0qg01d04w2h0E0T8v1u9cf20m80n2q0x11c21d25x513W6E1c06T5v1u88f0q0x10r81d35HKT-DRJABBBszrrh2E1b2T2v1u15f10w4qw02d03w0E0b4zc0000000000000000000000000000000000000000p21xIQv5aaFmFGPaqFOCE7am6BzFGTatFWCIzyDqvFGgODqvFGhoqqFoaqAvFGDWqRAyyGsFGIzElFnFGgOSGfFGhoqqFoaq00000
+
+The mp3 file is fetched using a AJAX GET request. The response is then decoded and played via the AudioContext object on start-up of the game.
+
 The Game class controls the overall game. The start() function starts the game proper. The game loop is performed by a call to window.requestAnimationFrame(). The loop is set at 60ms. This is enough to make the game seem smooth enough.
 
 The event loop performs screen updates of all the sprites, as well as processing user input, and calculating the movement of the monsters. All the redraws are done by the preRender() and render() methods on the Sprite class. To play the game, use the WSAD keys. To 'solve' the maze (i.e. to cheat and get shown the solution), click on the space key. All the sprites will temporarily stop moving. To carry on the game, press the space key a second time.
