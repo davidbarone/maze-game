@@ -38,4 +38,7 @@ The game ends either when you get to the key or one of the monsters gets you. At
 
 Given I've not optimised the code at all, I'm pretty surprised at just how fast JavaScript runs these days. All the state calculations and sprite updates all seem to happily fit into the 60ms animation window.
 
+## Debugging
+To run the game in VSCode, simple open the folder using `code .`, then type in `start ./src/index.html` from the command prompt.
+
 Hope you enjoy!

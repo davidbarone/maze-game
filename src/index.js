@@ -511,18 +511,22 @@ class Game {
   userInput(event) {
     const keyCode = event.keyCode;
     switch (keyCode) {
-      case 65: // 'A'
-        this.playerSprite.setDirection("LEFT");
-        break;
       case 87: // 'W'
         this.playerSprite.setDirection("UP");
         break;
-      case 68: // 'D'
-        this.playerSprite.setDirection("RIGHT");
-        break;
+
       case 83: // 'S'
         this.playerSprite.setDirection("DOWN");
         break;
+
+      case 65: // 'A'
+        this.playerSprite.setDirection("LEFT");
+        break;
+
+      case 68: // 'D'
+        this.playerSprite.setDirection("RIGHT");
+        break;
+
       case 32: // 'SPACE'
         this.initialiseBreadcrumbSprites();
         this.freeze = !this.freeze;
@@ -902,7 +906,7 @@ class MonsterSprite extends Sprite {
 // Sound Track
 function loadSoundTrack() {
   const audioCtx = new AudioContext();
-  var url = "https://api.dbarone.com/resources/name/Cornfield Chase.mp3";
+  var url = "https://api.dbarone.com/static/twinkle.mp3";
   var request = new XMLHttpRequest();
   request.responseType = "arraybuffer";
   request.open("GET", url, true);
@@ -922,6 +926,7 @@ function playSoundTrack(context, buffer) {
   var source = context.createBufferSource();
   //passing in data
   source.buffer = buffer;
+  source.loop = true;
   //giving the source which sound to play
   source.connect(context.destination);
   //start playing

@@ -17,9 +17,9 @@
     <fieldset>
       <legend>Parameters</legend>
       <label>Size of maze:</label>
-      <input type="number" name="size" id="size" value="30" />
+      <input type="number" name="size" id="size" value="20" />
       <label>Number of baddies:</label>
-      <input type="number" name="baddies" id="baddies" value="5" />
+      <input type="number" name="baddies" id="baddies" value="4" />
       <button id="start" onclick="startGame();">Start</button>
       <div class="instructions">
         (Instructions: Find the key! [WASD] to move, and [SPACE] to cheat.)
@@ -36,7 +36,7 @@
 
     <script type="text/javascript">
       function startGame() {
-        //loadSoundTrack();
+        loadSoundTrack();
         var size = document.getElementById("size").value;
         var baddies = document.getElementById("baddies").value;
         var button = document.getElementById("start");
